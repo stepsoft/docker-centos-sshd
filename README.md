@@ -1,7 +1,9 @@
 # docker-centos-sshd
 
 This document is on how to create the Dockfile and image of CentOS + SSHD.
+
 1.Pre-request:
+
 You have a virtual host (let's call it SVR) with CentOS 7 and Docker installed.
 You have already installed a CentOS 7 Docker image in you host.
 i.e. docker pull centos:latest
@@ -12,6 +14,7 @@ If not exists then:
 ssh-keygen -q -N "" -t rsa -f /root/.ssh/id_rsa
 
 2.Create Dockerfile
+
 Create the directory cd /root/docker/centos-sshd.
 cd /root/docker/centos-sshd
 cat ~/.ssh/id_rsa.pub > authorized_keys
